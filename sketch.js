@@ -34,30 +34,79 @@ var createScene = function () {
     //color background black
     scene.clearColor = new BABYLON.Color3.FromHexString('#000');
 
-
     //create sphere w params (x, y, z, diameter)
-    var s1 = createSphere(-1, 1, -1, 2);
+    var s1 = createSphere(3, 0, -1, 0.7);
 
     //wrap sphere in material from URL file
-    s1.material = fileMat('https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', scene);
-    
+    s1.material = hexMat("#00FF00");
     //create sphere
-    var s2 = createSphere(2, 2, 0.5, 2);
+    var s2 = createSphere(2, 2, 0.5, 0.5);
 
     //wrap sphere in material from local file
-    s2.material = fileMat('moon.jpg', scene);
-    
+    s2.material = hexMat('#ff0000');
+
+    var s3 = createSphere(-2, 2, 0.5, 0.5);
+
+    //wrap sphere in material from local file
+    s3.material = hexMat("#00FF00");
+
     //create box with params x, y, z, width, height, ddepth
     var b1 = createBox(2, -2, 2, 1, 1, 1);
 
     //wrap box in material colored with hex code
     b1.material = hexMat('#ff0000');
-    b1.rotation.z += Math.PI/4;
 
-    var b2 = createBox(0, -2, -1.5, 2, 2, 2);
+    var b2 = createBox(1, -3, -1.5, 2, 2, 2);
 
     //wrap box in material from local file
-    b2.material = fileMat('why.png');
+    b2.material = fileMat('mine.png');
+
+    var b3 = createBox(3, -5, 3, 2, 2, 2);
+
+    //wrap box in material from local file
+    b3.material = fileMat('present.png');
+   
+
+    var b4 = createBox(5, -5, -1.5, 2, 2, 2);
+
+    //wrap box in material from local file
+    b4.material = fileMat('possession.png');
+
+    var b5 = createBox(0, 5, -1.5, 2, 2, 2);
+
+    //wrap box in material from local file
+    b5.material = fileMat('possession.png');
+    var b6 = createBox(5, 3, -1.5, 2, 2, 2);
+
+    //wrap box in material from local file
+    b6.material = fileMat('control.jpg');
+
+    var b7 = createBox(6, -2, 2, 1, 1, 1);
+
+    //wrap box in material colored with hex code
+    b7.material = hexMat('#ff0000');
+
+    var b8 = createBox(7, -5, 2, 1, 1, 1);
+
+    //wrap box in material colored with hex code
+    b8.material = hexMat("#00FF00");
+
+    var b9 = createBox(8, -3, 2, 1, 1, 1);
+
+    //wrap box in material colored with hex code
+    b9.material = hexMat("#00FF00");
+    var b10 = createBox(0, 1, 2, 1, 1, 1);
+
+    //wrap box in material colored with hex code
+    b10.material = hexMat('#ff0000');
+
+
+    var b11 = createBox(-2, 0, -1.5, 2, 2, 2);
+
+    //wrap box in material from local file
+    b11.material = fileMat('control2.jpg');
+
+  
 
     return scene;
 };
